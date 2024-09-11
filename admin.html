@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+<body class="bg-[#F2EAE1]">
+    
+    <div class="flex justify-end">
+        <nav class="w-[25%] h-[100vh] flex flex-col justify-between">
+            <div>
+                <div class="w-[190px] ml-[25px] pt-[18px]">
+                    <h2 class="font-bold text-[20px] text-[#000000] leading-[24px] border-l-[4px] border-l-[#F8D442] pl-[12px] mb-[43px]">
+                        Admin Students    
+                    <h2>
+                </div>
+                <div class="w-[140px] mx-auto pt-[20px]">
+                    <label>
+                        <input class="person-choose-input hidden" type="file">
+                        <img class="person-choose-img rounded-full mb-[15px] cursor-pointer" src="./images/person-img.png" alt="person img" width="141" height="214">
+                    </label>
+                    
+                    <strong class="person-data font-bold text-[17px] text-[#000000] leading-[20px] mb-[10px] text-center block">Karthi Madesh</strong>
+                    <p class="font-medium text-[14px] text-[#FEAF00] leading-[17px] text-center">Admin</p>
+                </div>
+                <a class=" w-[193px] mx-auto mt-[23px] py-[13px] flex items-center justify-center gap-[15px] bg-[#FEAF00] rounded-[4px]" href="">
+                    <img src="./images/dopi-icon.svg" alt="dopi img" width="20" height="16">
+                    <p class="font-medium text-[14px] text-[#000000] leading-[17px]">Students</p>
+                </a>
+            </div>
+            <div class="logout-modul w-[180px] mx-auto flex gap-[23px] justify-center pb-[10px]  cursor-pointer">
+                <strong class="font-medium text-[14px] text-[#000000] leading-[17px]">Logout</strong>
+                <img src="./images/logout-icon.svg" alt="logout img" width="17" height="17">
+            </div>
+        </nav>
+
+
+        <div class="bg-[#F8F8F8] w-[75%]">
+            <div class="flex justify-between bg-[#F2EAE1]">
+                <img class="ml-[30px]" src="./images/back-icon.svg" alt="back img" width="18" height="18">
+                <div class="flex py-[12px]">
+                    <label class="w-[212px] flex bg-[#FFFFFF] rounded-[8px]">
+                        <input class="search-input w-[82%] ml-[13px] px-[2px] py-[10px] outline-none" type="text"  placeholder="Search...">
+                        <img class="" src="./images/search-icon.svg" alt="search img" width="14" height="14">
+                    </label>
+                    <img class="ml-[27px] mr-[51px]" src="./images/bell-icon.svg" alt=" bell img" width="17" height="20">
+                </div>
+            </div>
+            <div class=" w-[1110px] mx-auto flex items-center justify-between border-b-[1px] border-b-[#E5E5E5]">
+                <p class="font-bold text-[22px] text-[#000000] leading-[26px]">Students List</p>
+                <div class="flex py-[12px]">
+                    <img class="sort-img cursor-pointer" src="./images/sort-name.svg" alt="sort img" width="14" height="22">
+                    <button onclick="handleProductBtnClick()" class="w-[200px] py-[13px] rounded-[4px] bg-[#FEAF00] ml-[30px] font-medium text-[14px] text-white leading-[17px] border-[1px] border-transparent hover:bg-transparent hover:text-[#FEAF00] hover:border-[#FEAF00] duration-300">ADD NEW STUDENT</button>
+                </div>
+            </div>
+            <div class="w-[793px] mx-auto flex justify-between my-[21px] font-[600] text-[12px] text-[#ACACAC] leading-[14px]">
+                <p>Name</p>
+                <p>Email</p>
+                <p class="ml-[45px]">Phone</p>
+                <p>Enroll Number</p>
+                <p>Date   admission</p>
+            </div>
+            <ul class="render-list w-[1110px] mx-auto">
+
+
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="modal-wrapper" class="modal-wrapper fixed inset-0 backdrop-blur scale-0 duration-300">
+        <div class="modaul-inner m-auto w-[700px]  mt-[50px] bg-white inset-0 p-5 rounded-lg">
+
+        </div>
+    </div>
+
+    <script src="./js/admin/admin.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>
